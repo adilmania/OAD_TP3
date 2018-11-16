@@ -33,6 +33,9 @@
     <ClInclude Include="Unit1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Unit2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -50,6 +53,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Unit1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

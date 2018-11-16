@@ -26,7 +26,7 @@ void Lecture_fichier(std::string ad_file, T_Probleme &p) {
 		{
 			// Lecture ligne par ligne
 			getline(fichier, contenu);
-			cout << contenu << endl;
+			// cout << contenu << endl;
 
 			// Lecture caractère par caractère
 			compteur = 0;
@@ -52,7 +52,7 @@ void Lecture_fichier(std::string ad_file, T_Probleme &p) {
 			}
 		}
 
-		cout << "Reussi" << endl;
+		// cout << "Reussi" << endl;
 
 		fichier.close();  // on ferme le fichier
 	}
@@ -95,6 +95,7 @@ void Generer_Sol_Aleatoire(T_Probleme &p, T_Sol &s) {
 	
 	s.LISTE[0] = 999;
 
+	
 	srand(time(NULL));
 
 	for (i = 1; i <= p.nb_sommet; i++)
@@ -107,24 +108,25 @@ void Generer_Sol_Aleatoire(T_Probleme &p, T_Sol &s) {
 		tab[s.LISTE[i]]++;
 
 	}
-	/*
-	int i = 1;
-	for (i = 1; i <= p.nb_sommet; i++) {
+	
+	// i = 1;
+	/* for (i = 1; i <= p.nb_sommet; i++) {
 		s.LISTE[i] = i;
-	}
-	*/
+	} */
+	
 };
 
 void Calculer_Cout(T_Probleme &p, T_Sol &s) {
 	int i = 1;
 	int compteur = 1;
 	float mon_cout = 0;
-	while (i <= p.nb_sommet) {
+
+	while (i < p.nb_sommet) {
 		mon_cout += p.matrice_dist[s.LISTE[i]][s.LISTE[i + 1]];
 		compteur++;
 		i++;
 	}
-	cout << "Le Cout: " << mon_cout << endl;
+
 	mon_cout += p.matrice_dist[s.LISTE[i]][s.LISTE[1]];
 	cout << "Le Cout: " << mon_cout << endl;
-}
+} // Evaluer Un Tour

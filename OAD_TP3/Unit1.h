@@ -6,6 +6,7 @@
 #include <time.h>
 
 const int nb_sommets_max = 300;
+const int c_inf = 9999;
 
 typedef struct T_Probleme {
 	int nb_sommet;
